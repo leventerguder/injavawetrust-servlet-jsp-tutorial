@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>injavawetrust</display-name>
+
+	<servlet>
+		<servlet-name>HelloServletWorld</servlet-name>
+		<servlet-class>_01_HelloServletWorld.HelloServletWorld</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloServletWorld</servlet-name>
+		<url-pattern>/helloservletworld</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletLifecycle</servlet-name>
+		<servlet-class>_02_ServletLifecycle.ServletLifecycle</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ServletLifecycle</servlet-name>
+		<url-pattern>/servletlifecycle</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HelloServletConfig</servlet-name>
+		<servlet-class>_03_ServletConfig.HelloServletConfig</servlet-class>
+
+		<init-param>
+			<param-name>driverClassName</param-name>
+			<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+		</init-param>
+		<init-param>
+			<param-name>url</param-name>
+			<param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+		</init-param>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>levent</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>123456</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloServletConfig</servlet-name>
+		<url-pattern>/helloservletconfig</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HelloServletContext</servlet-name>
+		<servlet-class>_04_ServletContext.HelloServletContext</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Levent</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>surname</param-name>
+			<param-value>Erguder</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloServletContext</servlet-name>
+		<url-pattern>/helloservletcontext</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>email</param-name>
+		<param-value>erguder.levent@gmail.com</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>address</param-name>
+		<param-value>Istanbul</param-value>
+	</context-param>
+
+
+	<servlet>
+		<servlet-name>ResourceServletContext</servlet-name>
+		<servlet-class>_04_ServletContext.ResourceServletContext</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResourceServletContext</servlet-name>
+		<url-pattern>/resourceservletcontext</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MoreServletContext</servlet-name>
+		<servlet-class>_04_ServletContext.MoreServletContext</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MoreServletContext</servlet-name>
+		<url-pattern>/moreservletcontext</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RequestGetForm</servlet-name>
+		<servlet-class>_05_Request.RequestGetForm</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RequestGetForm</servlet-name>
+		<url-pattern>/requestgetform</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RequestPostForm</servlet-name>
+		<servlet-class>_05_Request.RequestPostForm</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RequestPostForm</servlet-name>
+		<url-pattern>/requestpostform</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MoreRequestMethod</servlet-name>
+		<servlet-class>_05_Request.MoreRequestMethod</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MoreRequestMethod</servlet-name>
+		<url-pattern>/morerequestmethod</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ResponseEncodingType</servlet-name>
+		<servlet-class>_06_Response.ResponseEncodingType</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResponseContentType</servlet-name>
+		<url-pattern>/responsecontenttype</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ResponseContentType</servlet-name>
+		<servlet-class>_06_Response.ResponseContentType</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResponseEncodingType</servlet-name>
+		<url-pattern>/responseencodingtype</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ResponseHeaderMethods</servlet-name>
+		<servlet-class>_06_Response.ResponseHeaderMethods</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResponseHeaderMethods</servlet-name>
+		<url-pattern>/responseheadermethods</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ResponseCookieMethods</servlet-name>
+		<servlet-class>_06_Response.ResponseCookieMethods</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResponseCookieMethods</servlet-name>
+		<url-pattern>/responsecookiemsethods</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ResponseCookieTimeoutCheck</servlet-name>
+		<servlet-class>_06_Response.ResponseCookieTimeoutCheck</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResponseCookieTimeoutCheck</servlet-name>
+		<url-pattern>/responsecookietimeoutcheck</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ResponseRedirect</servlet-name>
+		<servlet-class>_06_Response.ResponseRedirect</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResponseRedirect</servlet-name>
+		<url-pattern>/responseredirect</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ResponseRedirectMore</servlet-name>
+		<servlet-class>_06_Response.ResponseRedirectMore</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResponseRedirectMore</servlet-name>
+		<url-pattern>/responseredirectmore</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ResponseExcelDownload</servlet-name>
+		<servlet-class>_06_Response.ResponseExcelDownload</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResponseExcelDownload</servlet-name>
+		<url-pattern>/responseexceldownload</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ContextAttribute</servlet-name>
+		<servlet-class>_07_Attribute.context.ContextAttribute</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ContextAttribute</servlet-name>
+		<url-pattern>/contextattribute</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetContextAttribute</servlet-name>
+		<servlet-class>_07_Attribute.context.GetContextAttribute</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetContextAttribute</servlet-name>
+		<url-pattern>/getcontextattribute</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>SessionAttribute</servlet-name>
+		<servlet-class>_07_Attribute.session.SessionAttribute</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SessionAttribute</servlet-name>
+		<url-pattern>/sessionattribute</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetSessionAttribute</servlet-name>
+		<servlet-class>_07_Attribute.session.GetSessionAttribute</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetSessionAttribute</servlet-name>
+		<url-pattern>/getsessionattribute</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>RequestAttribute</servlet-name>
+		<servlet-class>_07_Attribute.request.RequestAttribute</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RequestAttribute</servlet-name>
+		<url-pattern>/requestattribute</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetRequestAttribute</servlet-name>
+		<servlet-class>_07_Attribute.request.GetRequestAttribute</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetRequestAttribute</servlet-name>
+		<url-pattern>/getrequestattribute</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>RequestController</servlet-name>
+		<servlet-class>_07_Attribute.mvc.controller.RequestController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RequestController</servlet-name>
+		<url-pattern>/requestcontroller</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RequestController2</servlet-name>
+		<servlet-class>_07_Attribute.mvc.controller.RequestController2</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RequestController2</servlet-name>
+		<url-pattern>/requestcontroller2</url-pattern>
+	</servlet-mapping>
+
+
+	<!--_08_Listener -->
+
+
+	<listener>
+		<listener-class>_08_Listener.context.ServletContextListenerImpl</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>_08_Listener.context.ServletContextListenerImpl2</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>_08_Listener.context.ServletContextListenerImpl3</listener-class>
+	</listener>
+
+
+	<listener>
+		<listener-class>_08_Listener.context.attribute.ServletContextAttributeListenerImpl</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>SCAttributeListenMe</servlet-name>
+		<servlet-class>_08_Listener.context.attribute.SCAttributeListenMe</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SCAttributeListenMe</servlet-name>
+		<url-pattern>/scattributelistenMe</url-pattern>
+	</servlet-mapping>
+
+
+	<listener>
+		<listener-class>_08_Listener.request.ServletRequestListenerImpl</listener-class>
+	</listener>
+
+
+	<servlet>
+		<servlet-name>RequestListenMe</servlet-name>
+		<servlet-class>_08_Listener.request.ServletRequestListenMe</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RequestListenMe</servlet-name>
+		<url-pattern>/requestlistenme</url-pattern>
+	</servlet-mapping>
+
+
+	<listener>
+		<listener-class>_08_Listener.request.attribute.ServletRequestAttributeListenerImpl</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>RequestAttributeListenMe</servlet-name>
+		<servlet-class>_08_Listener.request.attribute.ServletRequestAttributeListenMe</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RequestAttributeListenMe</servlet-name>
+		<url-pattern>/requestattributelistenme</url-pattern>
+	</servlet-mapping>
+
+
+	<listener>
+		<listener-class>_08_Listener.session.HttpSessionListenerImpl</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>HttpSessionListenMe</servlet-name>
+		<servlet-class>_08_Listener.session.HttpSessionListenMe</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HttpSessionListenMe</servlet-name>
+		<url-pattern>/httpsessionlistenme</url-pattern>
+	</servlet-mapping>
+
+
+	<listener>
+		<listener-class>_08_Listener.session.attribute.HttpSessionAttributeListenerImpl</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>HttpSessionAttributeListenMe</servlet-name>
+		<servlet-class>_08_Listener.session.attribute.HttpSessionAttributeListenMe</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HttpSessionAttributeListenMe</servlet-name>
+		<url-pattern>/httpsessionattributelistenme</url-pattern>
+	</servlet-mapping>
+
+
+	<!--HttpSessionBindingListener i listener olarak eklemeye gerek yoktur. 
+		Dilersek yazabiliriz. -->
+	<listener>
+		<listener-class>_08_Listener.session.binding.HttpSessionBindingListenerImpl</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>HttpSessionBindingListenMe</servlet-name>
+		<servlet-class>_08_Listener.session.binding.HttpSessionBindingListenMe</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HttpSessionBindingListenMe</servlet-name>
+		<url-pattern>/httpsessionbindinglistenme</url-pattern>
+	</servlet-mapping>
+
+
+	<listener>
+		<listener-class>_08_Listener.session.activation.HttpSessionActivationListenerImpl</listener-class>
+	</listener>
+
+
+	<servlet>
+		<servlet-name>HelloHttpSession</servlet-name>
+		<servlet-class>_09_HttpSession.HelloHttpSession</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloHttpSession</servlet-name>
+		<url-pattern>/hellohttpsession</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>URLRewrite</servlet-name>
+		<servlet-class>_09_HttpSession.urlrewrite.URLRewrite</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>URLRewrite</servlet-name>
+		<url-pattern>/urlrewrite</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetSession</servlet-name>
+		<servlet-class>_09_HttpSession.urlrewrite.GetSession</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetSession</servlet-name>
+		<url-pattern>/getsession</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>URLRewriteSendRedirect</servlet-name>
+		<servlet-class>_09_HttpSession.encoderedirect.URLRewriteSendRedirect</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>URLRewriteSendRedirect</servlet-name>
+		<url-pattern>/urlrewritesendredirect</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>MoreSessionMethods</servlet-name>
+		<servlet-class>_09_HttpSession.more.MoreSessionMethods</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MoreSessionMethods</servlet-name>
+		<url-pattern>/moresessionmethods</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SessionTimeOut</servlet-name>
+		<servlet-class>_09_HttpSession.timeout.SessionTimeOut</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SessionTimeOut</servlet-name>
+		<url-pattern>/sessiontimeout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SessionTimeOutCheck</servlet-name>
+		<servlet-class>_09_HttpSession.timeout.SessionTimeOutCheck</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SessionTimeOutCheck</servlet-name>
+		<url-pattern>/sessiontimeoutcheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SessionInvalidate</servlet-name>
+		<servlet-class>_09_HttpSession.timeout.SessionInvalidate</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SessionInvalidate</servlet-name>
+		<url-pattern>/sessioninvalidate</url-pattern>
+	</servlet-mapping>
+
+
+	<session-config>
+		<session-timeout>5</session-timeout>
+	</session-config>
+
+	<servlet>
+		<servlet-name>CookieTimeOut</servlet-name>
+		<servlet-class>_09_HttpSession.cookie.CookieTimeOut</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CookieTimeOut</servlet-name>
+		<url-pattern>/cookietimeout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CookieTimeOutCheck</servlet-name>
+		<servlet-class>_09_HttpSession.cookie.CookieTimeOutCheck</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CookieTimeOutCheck</servlet-name>
+		<url-pattern>/cookietimeoutcheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Lifecycle</servlet-name>
+		<jsp-file>/02_Lifecycle/lifecycle.jsp</jsp-file>
+		<init-param>
+			<param-name>site</param-name>
+			<param-value>www.injavawetrust.com</param-value>
+		</init-param>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>erguder.levent@gmail.com</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Lifecycle</servlet-name>
+		<url-pattern>/Lifecycle.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UseBeanServlet</servlet-name>
+		<servlet-class>_10_UseBean.UseBeanRequestImplicit</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UseBeanServlet</servlet-name>
+		<url-pattern>/usebeanservlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UseBeanProperty</servlet-name>
+		<servlet-class>_10_UseBean.UseBeanProperty</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UseBeanProperty</servlet-name>
+		<url-pattern>/usebeanproperty</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UseBeanSetProperty</servlet-name>
+		<servlet-class>_10_UseBean.UseBeanSetProperty</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UseBeanSetProperty</servlet-name>
+		<url-pattern>/usebeansetproperty</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UseBeanType</servlet-name>
+		<servlet-class>_10_UseBean.UseBeanType</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UseBeanType</servlet-name>
+		<url-pattern>/usebeanType</url-pattern>
+	</servlet-mapping>
+
+	<!-- Expression Language -->
+
+	<servlet>
+		<servlet-name>WithoutExpressionLanguage</servlet-name>
+		<servlet-class>_11_ExpressionLanguage.WithoutExpressionLanguage</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WithoutExpressionLanguage</servlet-name>
+		<url-pattern>/withoutexpressionlanguage</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WithExpressionLanguageBean</servlet-name>
+		<servlet-class>_11_ExpressionLanguage.WithExpressionLanguageBean</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WithExpressionLanguageBean</servlet-name>
+		<url-pattern>/withexpressionlanguagebean</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DotOperatorExpressionLanguage</servlet-name>
+		<servlet-class>_11_ExpressionLanguage.DotOperatorExpressionLanguage</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DotOperatorExpressionLanguage</servlet-name>
+		<url-pattern>/dotoperatorexpressionlanguage</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BracketBeanAndMapEL</servlet-name>
+		<servlet-class>_11_ExpressionLanguage.BracketBeanAndMapEL</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BracketBeanAndMapEL</servlet-name>
+		<url-pattern>/bracketbeanandmapel</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BracketArrayAndListEL</servlet-name>
+		<servlet-class>_11_ExpressionLanguage.BracketArrayAndListEL</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BracketArrayAndListEL</servlet-name>
+		<url-pattern>/bracketarrayandlistel</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ExpressionLanguageImplicitObject</servlet-name>
+		<servlet-class>_11_ExpressionLanguage.implicitobject.ELImplicit</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ExpressionLanguageImplicitObject</servlet-name>
+		<url-pattern>/elimplicit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ELOperator</servlet-name>
+		<servlet-class>_11_ExpressionLanguage.operators.ELOperator</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ELOperator</servlet-name>
+		<url-pattern>/eloperator</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DynamicIncludeMe</servlet-name>
+		<servlet-class>_12_DynamicInclude.DynamicIncludeMe</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DynamicIncludeMe</servlet-name>
+		<url-pattern>/dynamicIncludeMe</url-pattern>
+	</servlet-mapping>
+
+</web-app>

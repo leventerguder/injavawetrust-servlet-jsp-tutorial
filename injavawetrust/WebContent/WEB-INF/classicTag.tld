@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<uri>myClassicTagURI</uri>
+
+	<tlib-version>2.0</tlib-version>
+	<tag>
+		<name>myClassicTagName</name>
+		<tag-class>_15_ClassicTagHandler.ClassicTagHandler</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+
+	<tag>
+		<name>myClassicTagName2</name>
+		<tag-class>_15_ClassicTagHandler.ClassicTagHandler2</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+
+	<tag>
+		<name>myClassicTagName3</name>
+		<tag-class>_15_ClassicTagHandler.ClassicTagHandler3</tag-class>
+		<body-content>tagdependent</body-content>
+	</tag>
+
+	<tag>
+		<name>myClassicTagName4</name>
+		<tag-class>_15_ClassicTagHandler.ClassicTagHandler4</tag-class>
+		<body-content>tagdependent</body-content>
+	</tag>
+
+	<tag>
+		<name>myClassicTagName5</name>
+		<tag-class>_15_ClassicTagHandler.ClassicTagHandler5</tag-class>
+		<body-content>scriptless</body-content>
+
+		<attribute>
+			<name>myName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>myClassicTagName6</name>
+		<tag-class>_15_ClassicTagHandler.ClassicTagHandler6</tag-class>
+		<body-content>scriptless</body-content>
+
+		<attribute>
+			<name>myList</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>myClassicTagName7</name>
+		<tag-class>_15_ClassicTagHandler.ClassicTagHandler7</tag-class>
+		<body-content>tagdependent</body-content>
+	</tag>
+	
+</taglib>

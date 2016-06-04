@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-
+jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<uri>nestedTagURI</uri>
+
+	<tlib-version>2.0</tlib-version>
+
+	<tag>
+		<name>mySimpleNestedTagName</name>
+		<tag-class>_17.NestedTagHandler.NestedSimpleTagHandler</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>myClassicNestedTagName</name>
+		<tag-class>_17.NestedTagHandler.NestedClassicTagHandler</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>menu</name>
+		<tag-class>_17.NestedTagHandler.Menu</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>menuItem</name>
+		<tag-class>_17.NestedTagHandler.MenuItem</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>itemValue</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+</taglib>
